@@ -1,0 +1,22 @@
+PROMPT_COMMAND='
+    if [[ ("$PWD" != "$AUTO_ENV_SRC_PWD"/*
+        && "$PWD" != "$AUTO_ENV_SRC_PWD")
+        || ! "$AUTO_ENV_SRC_PWD" ]]; then
+
+        if [[ -n "$AUTO_ENV_DEACTIVATE" && -f "$AUTO_ENV_DEACTIVATE" ]]; then
+            source "$AUTO_ENV_DEACTIVATE"
+            unset AUTO_ENV_DEACTIVATE
+            unset AUTO_ENV_SRC_PWD
+        fi
+
+        if [[ -f "$PWD/.auto_env_activate.sh" ]]; then
+            if [[ ! -f "$PWD/.auto_env_deactivate.sh" ]]; then
+                echo "Warning: auto_env_activate.sh found, but auto_env_deactivate.sh not found!"
+            else
+                source "$PWD/.auto_env_activate.sh"
+                export AUTO_ENV_SRC_PWD="$PWD"
+                export AUTO_ENV_DEACTIVATE="$PWD/.auto_env_deactivate.sh"
+            fi
+        fi
+    fi
+'
