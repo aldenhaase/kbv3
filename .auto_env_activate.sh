@@ -4,7 +4,7 @@
 OLD_ENV_VARS=$(env | grep -v '^_' | cut -d= -f1)
 
 # Source the script
-source tools/paths.local
+source environment/paths.local
 
 # Find the new environment variables
 NEW_ENV_VARS=$(env | grep -v '^_' | cut -d= -f1)
@@ -23,5 +23,14 @@ done
 # Export the collected variables
 export AUTO_ENV_TRACKED_VARS="$EXPORT_VARS"
 
+#Venv
+VENV_PATH=".venv"
+
+if [ -d "$VENV_PATH" ]; then
+    source "$VENV_PATH/bin/activate"
+    echo "Virtual environment activated."
+else
+    echo "Error: Virtual environment not found."
+fi
 
 echo "Welcome to KBv.3"
