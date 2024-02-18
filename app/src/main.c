@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#include "zephyr/usb/usb_device.h"
 #include <stdio.h>
 #include <zephyr/kernel.h>
 #include <zephyr/drivers/gpio.h>
@@ -29,7 +30,7 @@ int main(void)
 	if (!gpio_is_ready_dt(&led)) {
 		return 0;
 	}
-
+    usb_enable(NULL);
 	ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE);
 	if (ret < 0) {
 		return 0;
