@@ -9,7 +9,7 @@
 #include <atmel/samd21.dtsi>
 #include <atmel/samx2xx18.dtsi>
 #include "atsamd21_xpro-pinctrl.dtsi"
-#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <include/dt-bindings/gpio/gpio-ext.h>
 
 / {
 	model = "SAM D21 Xplained Pro";
@@ -26,7 +26,6 @@
 	aliases {
 		led0 = &led0;
 		pwm-led0 = &pwm_led0;
-		sw0 = &user_button;
 		i2c-0 = &sercom2;
 	};
 
@@ -45,14 +44,16 @@
 		};
 	};
 
-	buttons {
-		compatible = "gpio-keys";
-		user_button: button_0 {
-			gpios = <&porta 15 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-			label = "SW0";
-			zephyr,code = <INPUT_KEY_0>;
-		};
-	};
+    kbv3_keys {
+        r0c0: r0c0 {
+            compatible = "kbv3-keys";
+            gpios = <&portb 0 (GPIO_PULL_UP | GPIO_INT_EDGE_BOTH)>;
+        };
+        r0c1: r0c1 {
+            compatible = "kbv3-keys";
+            gpios = <&portb 1 GPIO_PULL_UP>;
+        };
+    };
 };
 
 &cpu0 {

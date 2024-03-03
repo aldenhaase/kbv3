@@ -1,0 +1,8 @@
+description: Generic GPIO configuration
+
+compatible: "kbv3-keys"
+
+properties:
+   gpios:
+      type: phandle-array
+      required: true

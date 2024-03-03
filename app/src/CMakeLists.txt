@@ -2,6 +2,7 @@ target_sources(
     app PRIVATE
     main.c
     alive.c
+    keys.c
 	)
 
 target_sources_ifdef(
