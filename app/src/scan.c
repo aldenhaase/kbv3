@@ -60,6 +60,11 @@ static void activate_row(const struct gpio_dt_spec row_dev) {
    gpio_pin_set(row_dev.port, row_dev.pin, 1);
 }
 
+
+static void deactivate_row(const struct gpio_dt_spec row_dev) {
+   gpio_pin_set(row_dev.port, row_dev.pin, 0);
+}
+
 static void configure_column_pins(void) {
     for(int i = 0; i < NUM_COLUMNS; ++i) {
         if (!gpio_is_ready_dt(&columns[i])) {
@@ -123,6 +128,7 @@ static void run(void) {
                         key_mapping[i][j];
                 }
             }
+            deactivate_row(rows[i]);
         }
         if(kb_report.len) {
             hid_int_ep_write(kb_dev, kb_report.bytes, sizeof(kb_report.bytes), NULL);
