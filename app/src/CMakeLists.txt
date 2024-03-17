@@ -3,6 +3,7 @@ target_sources(
     main.c
     alive.c
     scan.c
+    report.c
     key_mapping.c
 	)
 

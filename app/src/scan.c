@@ -1,7 +1,6 @@
 #include <sys/_stdint.h>
 #include <zephyr/device.h>
 #include <zephyr/devicetree.h>
-#include <zephyr/sys/__assert.h>
 #include <zephyr/usb/usb_device.h>
 #include <zephyr/kernel.h>
 #include <zephyr/drivers/gpio.h>
@@ -9,8 +8,12 @@
 #include <zephyr/usb/class/usb_hid.h>
 #include <zephyr/usb/class/hid.h>
 
+#include "report.h"
+#include "key_mapping.h"
+
 #define SCAN_STACK_SIZE 2048
 #define SCAN_PRIORITY   5
+#define SCAN_DEBOUNCE_COUNT 10
 
 #define SLEEP_TIME_US 500
 #define NUM_ROWS 4
@@ -18,10 +21,6 @@
 
 LOG_MODULE_REGISTER(scan, CONFIG_LOG_DEFAULT_LEVEL);
 
-extern enum hid_kbd_code key_mapping[4][12];
-
-static const uint8_t hid_kbd_report_desc[] = HID_KEYBOARD_REPORT_DESC();
-static const struct device * kb_dev;
 #define LIST_OF_COLUMN_NAMES\
     X(c0)                   \
     X(c1)                   \
@@ -87,56 +86,52 @@ static void configure_row_pins(void) {
     }
 }
 
-static void configure_hid(void) {
-	kb_dev = device_get_binding("HID_0");
-    usb_hid_register_device(kb_dev, hid_kbd_report_desc,
-            sizeof(hid_kbd_report_desc), NULL);
-    usb_hid_init(kb_dev);
-    usb_enable(NULL);
+static uint8_t debounce_states[NUM_ROWS][NUM_COLUMNS];
+static enum hid_kbd_code prev_high_pins[REPORT_MAX_KEYS_PRESSED];
+
+static bool has_state_changed(enum hid_kbd_code *curr) {
+    for(int i = 0; i < REPORT_MAX_KEYS_PRESSED; ++i) {
+        if(prev_high_pins[i] != curr[i]) {
+            return true;
+        }
+    }
+    return false;
 }
 
-struct kb_report {
-    union {
-        uint8_t bytes[8];
-        struct {
-            uint8_t modifier;
-            uint8_t reserved;
-            uint8_t keypress[6];
-        } rep_fields;
-    };
-    uint8_t size;
-    uint8_t len;
-};
-
 static void run(void) {
-    configure_column_pins();
-    configure_row_pins();
-    configure_hid();
-    while(1) {
-        k_msleep(1);
-    }
 	while (1) {
-        struct kb_report kb_report = {.size = 6};
+        enum hid_kbd_code high_pins[REPORT_MAX_KEYS_PRESSED] = {0};
+        uint8_t num_high_pins = 0;
         for (int i = 0; i < NUM_ROWS; ++i) {
             activate_row(rows[i]);
             for (int j = 0; j < NUM_COLUMNS; ++j) {
-                if (read_column(columns[j]) == 1) {
-                    if(kb_report.size == kb_report.len) {
-                        LOG_ERR("No more room in report");
+                if(read_column(columns[j])) {
+                    if(num_high_pins < REPORT_MAX_KEYS_PRESSED) {
+                        if(debounce_states[i][j] == SCAN_DEBOUNCE_COUNT ? true :
+                                ++debounce_states[i][j] && false){
+                            high_pins[num_high_pins++] = key_mapping[i][j];
+                        }
+                    }else {
+                        debounce_states[i][j]>0?--debounce_states[i][j]:0xDEAD;
                     }
-                    kb_report.rep_fields.keypress[kb_report.len++] =
-                        key_mapping[i][j];
                 }
             }
             deactivate_row(rows[i]);
         }
-        if(kb_report.len) {
-            hid_int_ep_write(kb_dev, kb_report.bytes, sizeof(kb_report.bytes), NULL);
+        if(has_state_changed(high_pins)) {
+            REPORT_APPEND_KEYS(high_pins);
+            memcpy(prev_high_pins, high_pins, REPORT_MAX_KEYS_PRESSED);
         }
         k_usleep(SLEEP_TIME_US);
 	}
 }
 
-K_THREAD_DEFINE(scan_thread, SCAN_STACK_SIZE, run, NULL, NULL, NULL,
+static void init() {
+    configure_column_pins();
+    configure_row_pins();
+    run();
+}
+
+K_THREAD_DEFINE(scan_thread, SCAN_STACK_SIZE, init, NULL, NULL, NULL,
         SCAN_PRIORITY, K_ESSENTIAL, 0);
 
