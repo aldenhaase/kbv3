@@ -8,6 +8,7 @@
 #include <zephyr/usb/class/usb_hid.h>
 #include <zephyr/usb/class/hid.h>
 
+#include "scan.h"
 #include "report.h"
 #include "key_mapping.h"
 
@@ -87,11 +88,14 @@ static void configure_row_pins(void) {
 }
 
 static uint8_t debounce_states[NUM_ROWS][NUM_COLUMNS];
-static enum hid_kbd_code prev_high_pins[REPORT_MAX_KEYS_PRESSED];
+static struct scan_high_pin prev_high_pins[REPORT_MAX_KEYS_PRESSED];
 
-static bool has_state_changed(enum hid_kbd_code *curr) {
+static bool has_state_changed(struct scan_high_pin *curr) {
     for(int i = 0; i < REPORT_MAX_KEYS_PRESSED; ++i) {
-        if(prev_high_pins[i] != curr[i]) {
+        if(prev_high_pins[i].r != curr[i].r) {
+            return true;
+        }
+        if(prev_high_pins[i].c != curr[i].c) {
             return true;
         }
     }
@@ -100,7 +104,7 @@ static bool has_state_changed(enum hid_kbd_code *curr) {
 
 static void run(void) {
 	while (1) {
-        enum hid_kbd_code high_pins[REPORT_MAX_KEYS_PRESSED] = {0};
+        struct scan_high_pin high_pins[REPORT_MAX_KEYS_PRESSED] = {0};
         uint8_t num_high_pins = 0;
         for (int i = 0; i < NUM_ROWS; ++i) {
             activate_row(rows[i]);
@@ -109,7 +113,8 @@ static void run(void) {
                     if(num_high_pins < REPORT_MAX_KEYS_PRESSED) {
                         if(debounce_states[i][j] == SCAN_DEBOUNCE_COUNT ? true :
                                 ++debounce_states[i][j] && false){
-                            high_pins[num_high_pins++] = key_mapping[i][j];
+                            high_pins[num_high_pins].r = i;
+                            high_pins[num_high_pins++].c = j;
                         }
                     }else {
                         debounce_states[i][j]>0?--debounce_states[i][j]:0xDEAD;
@@ -119,7 +124,7 @@ static void run(void) {
             deactivate_row(rows[i]);
         }
         if(has_state_changed(high_pins)) {
-            REPORT_APPEND_KEYS(high_pins);
+            REPORT_APPEND_KEYS(high_pins, num_high_pins);
             memcpy(prev_high_pins, high_pins, REPORT_MAX_KEYS_PRESSED);
         }
         k_usleep(SLEEP_TIME_US);

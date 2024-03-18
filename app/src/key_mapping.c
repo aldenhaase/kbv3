@@ -1,51 +1,40 @@
+#include <sys/_stdint.h>
 #include <zephyr/usb/class/hid.h>
 
-enum hid_kbd_code key_mapping[4][12] = {
-    [0][0]  = HID_KEY_0,
-    [0][2]  = HID_KEY_0,
-    [0][3]  = HID_KEY_0,
-    [0][4]  = HID_KEY_0,
-    [0][5]  = HID_KEY_0,
-    [0][6]  = HID_KEY_0,
-    [0][7]  = HID_KEY_0,
-    [0][8]  = HID_KEY_0,
-    [0][9]  = HID_KEY_0,
-    [0][10] = HID_KEY_0,
-    [0][11] = HID_KEY_0,
+#include "scan.h"
+#include "key_mapping.h"
 
-    [1][0]  = HID_KEY_0,
-    [1][2]  = HID_KEY_0,
-    [1][3]  = HID_KEY_0,
-    [1][4]  = HID_KEY_0,
-    [1][5]  = HID_KEY_0,
-    [1][6]  = HID_KEY_0,
-    [1][7]  = HID_KEY_0,
-    [1][8]  = HID_KEY_0,
-    [1][9]  = HID_KEY_0,
-    [1][10] = HID_KEY_0,
-    [1][11] = HID_KEY_0,
+#define KBV3_LAYER_SHIFT HID_KBD_MODIFIER_NONE
 
-    [2][0]  = HID_KEY_0,
-    [2][2]  = HID_KEY_0,
-    [2][3]  = HID_KEY_0,
-    [2][4]  = HID_KEY_0,
-    [2][5]  = HID_KEY_0,
-    [2][6]  = HID_KEY_0,
-    [2][7]  = HID_KEY_0,
-    [2][8]  = HID_KEY_0,
-    [2][9]  = HID_KEY_0,
-    [2][10] = HID_KEY_0,
-    [2][11] = HID_KEY_0,
-
-    [3][0]  = HID_KEY_0,
-    [3][2]  = HID_KEY_0,
-    [3][3]  = HID_KEY_0,
-    [3][4]  = HID_KEY_0,
-    [3][5]  = HID_KEY_0,
-    [3][6]  = HID_KEY_0,
-    [3][7]  = HID_KEY_0,
-    [3][8]  = HID_KEY_0,
-    [3][9]  = HID_KEY_0,
-    [3][10] = HID_KEY_0,
-    [3][11] = HID_KEY_0,
+struct key_mapping_item_internal {
+    struct key_mapping_item l0;
+    struct key_mapping_item l1;
 };
+
+static uint8_t current_layer = 0;
+
+static struct key_mapping_item_internal key_mapping[4][12] = {
+    [0][0]   = {.l0.hid_code = HID_KBD_MODIFIER_LEFT_CTRL,
+                .l0.type = KEY_MAPPING_MODIFIER_CODE,
+                .l1.hid_code = HID_KBD_MODIFIER_LEFT_CTRL,
+                .l1.type = KEY_MAPPING_MODIFIER_CODE},
+    [0][1]   = {.l0.hid_code = HID_KEY_CAPSLOCK,
+                .l0.type = KEY_MAPPING_KEY_CODE,
+                .l1.hid_code = HID_KEY_CAPSLOCK,
+                .l1.type = KEY_MAPPING_KEY_CODE},
+    [0][2]   = {.l0.hid_code = HID_KBD_MODIFIER_LEFT_ALT,
+                .l0.type = KEY_MAPPING_MODIFIER_CODE,
+                .l1.hid_code = HID_KBD_MODIFIER_LEFT_ALT,
+                .l1.type = KEY_MAPPING_MODIFIER_CODE},
+    [0][3]   = {.l0.hid_code = KBV3_LAYER_SHIFT,
+                .l0.type = KEY_MAPPING_KBV3_CODE,
+                .l1.hid_code = KBV3_LAYER_SHIFT, //This should be impossible to press
+                .l1.type = KEY_MAPPING_KBV3_CODE},
+};
+
+struct key_mapping_item KEY_MAPPING_GET_KEY_CODE(struct scan_high_pin high_pin) {
+    if(current_layer == 0){
+        return key_mapping[high_pin.c][high_pin.r].l0;
+    }
+    return key_mapping[high_pin.c][high_pin.r].l1;
+}
