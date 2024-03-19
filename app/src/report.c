@@ -22,6 +22,12 @@ K_MSGQ_DEFINE(report_kb_q, REPORT_MSGQ_SIZE, REPORT_MSGQ_MAX_ITEMS, 2);
 
 static const uint8_t hid_kbd_report_desc[] = HID_KEYBOARD_REPORT_DESC();
 static const struct device * kb_dev;
+void report_parse_matrix(const struct scan_report);
+
+static struct scan_sub_data scan_sub_data = {
+    .alert_period = 2,
+    .receive_matrix_state = report_parse_matrix,
+};
 
 static struct report_kb_data {
     union {
@@ -34,20 +40,23 @@ static struct report_kb_data {
     };
 } kb_data;
 
-void REPORT_APPEND_KEYS(struct scan_high_pin *high_pins, uint8_t num_pins) {
-    __ASSERT(num_pins <= REPORT_MAX_KEYS_PRESSED, "%s too many keys", __func__);
-    uint8_t key_index = 0;
-    for(int i = 0; i < num_pins; ++i) {
-        struct key_mapping_item item = KEY_MAPPING_GET_KEY_CODE(high_pins[i]);
-        if(item.type == KEY_MAPPING_MODIFIER_CODE) {
-            kb_data.rep_fields.modifier = item.hid_code;
-        }
-        if(item.type == KEY_MAPPING_KEY_CODE) {
-            kb_data.rep_fields.keypress[key_index++] = item.hid_code;
-        }
-    }
-    k_msgq_put(&report_kb_q, kb_data.bytes, K_NO_WAIT);
-}
+//void report_append_keys(struct scan_high_pin *high_pins, uint8_t num_pins) {
+//    __ASSERT(num_pins <= REPORT_MAX_KEYS_PRESSED, "%s too many keys", __func__);
+//    uint8_t key_index = 0;
+//    for(int i = 0; i < num_pins; ++i) {
+//        struct key_mapping_item item = KEY_MAPPING_GET_KEY_CODE(high_pins[i]);
+//        if(item.type == KEY_MAPPING_MODIFIER_CODE) {
+//            kb_data.rep_fields.modifier = item.hid_code;
+//        }
+//        if(item.type == KEY_MAPPING_KEY_CODE) {
+//            kb_data.rep_fields.keypress[key_index++] = item.hid_code;
+//        }
+//        if(item.type == KEY_MAPPING_KBV3_CODE) {
+//
+//        }
+//    }
+//    k_msgq_put(&report_kb_q, kb_data.bytes, K_NO_WAIT);
+//}
 
 static void configure_hid(void) {
 	kb_dev = device_get_binding("HID_0");
@@ -67,6 +76,7 @@ static void run(void) {
 
 static void init() {
     configure_hid();
+    Scan_Subscribe(&scan_sub_data) ;
     run();
 }
 

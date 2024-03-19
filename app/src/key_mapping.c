@@ -4,7 +4,7 @@
 #include "scan.h"
 #include "key_mapping.h"
 
-#define KBV3_LAYER_SHIFT HID_KBD_MODIFIER_NONE
+#define KBV3_LAYER_ONE HID_KBD_MODIFIER_NONE
 
 struct key_mapping_item_internal {
     struct key_mapping_item l0;
@@ -26,9 +26,9 @@ static struct key_mapping_item_internal key_mapping[4][12] = {
                 .l0.type = KEY_MAPPING_MODIFIER_CODE,
                 .l1.hid_code = HID_KBD_MODIFIER_LEFT_ALT,
                 .l1.type = KEY_MAPPING_MODIFIER_CODE},
-    [0][3]   = {.l0.hid_code = KBV3_LAYER_SHIFT,
+    [0][3]   = {.l0.hid_code = KBV3_LAYER_ONE,
                 .l0.type = KEY_MAPPING_KBV3_CODE,
-                .l1.hid_code = KBV3_LAYER_SHIFT, //This should be impossible to press
+                .l1.hid_code = KBV3_LAYER_ONE,
                 .l1.type = KEY_MAPPING_KBV3_CODE},
 };
 
@@ -37,4 +37,10 @@ struct key_mapping_item KEY_MAPPING_GET_KEY_CODE(struct scan_high_pin high_pin) 
         return key_mapping[high_pin.c][high_pin.r].l0;
     }
     return key_mapping[high_pin.c][high_pin.r].l1;
+}
+
+void KEY_MAPPING_HANDLE_SPECIAL_KEY(struct key_mapping_item key) {
+    if(key.hid_code == KBV3_LAYER_ONE) {
+        current_layer = 1;
+    }
 }
