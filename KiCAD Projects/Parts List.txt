@@ -1,0 +1,37 @@
+Low Profile Key Switches *Switch selection subject to change
+	- Kailh Choc V2 (has MX stem)
+	- Kailh Choc V1 (has a thicker version of the MX stem)
+
+Hot-Swappable key
+	- Switch Sockets for Kailh CHOC (https://www.adafruit.com/product/5118)
+	- $2.50 per pack of 10
+	- Foot Print "Hotswap_Choc_V1V2"
+
+Keyboard Scanner 
+	- TCA8418RTWR (https://www.digikey.com/en/products/detail/texas-instruments/TCA8418RTWR/2172843)
+	- $1.64 each 
+
+Addressable LEDs
+	- IN-PI55TATPRPGPB (https://www.digikey.com/en/products/detail/inolux/IN-PI55TATPRPGPB/9681234)
+	- $0.55 /unit or $184.43 for 1,000 units
+
+FFC Cable (Keypad Matrix to MCU)
+	- Molex Cable (https://www.digikey.com/en/products/detail/molex/0151670247/3281500)
+	- $1.84 /unit
+
+FFC Connector (Keypad Matrix to MCU)
+	- Molex Connector Right Angle Slide Lock (https://www.molex.com/en-us/products/part-detail/2005280100)
+	- $1.98 /unit
+	- Foot Print "200528"
+	
+MCU
+	- ATSAMD21J18A-AUT (https://www.digikey.com/en/products/detail/microchip-technology/ATSAMD21J18A-AUT/4878863)
+	- $4.46 /unit
+
+USB-C Port
+	- USB4056-03-A (https://www.digikey.com/en/products/detail/gct/USB4056-03-A/14638038)
+	- $0.97 /unit
+
+PMIC 
+	- MAX77958EWV+T (https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX77958EWV-T/12460782)
+	- $2.89 /unit

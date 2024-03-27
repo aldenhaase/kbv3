@@ -5,6 +5,504 @@
 	(uuid "cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector:Conn_01x10_Socket"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x10_Socket"
+				(at 0 -15.24 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x10, script generated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x10_Socket_1_1"
+				(arc
+					(start 0 -12.192)
+					(mid -0.5058 -12.7)
+					(end 0 -13.208)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -9.652)
+					(mid -0.5058 -10.16)
+					(end 0 -10.668)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -7.112)
+					(mid -0.5058 -7.62)
+					(end 0 -8.128)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -4.572)
+					(mid -0.5058 -5.08)
+					(end 0 -5.588)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -2.032)
+					(mid -0.5058 -2.54)
+					(end 0 -3.048)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -12.7) (xy -0.508 -12.7)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -10.16) (xy -0.508 -10.16)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -7.62) (xy -0.508 -7.62)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -5.08) (xy -0.508 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -0.508 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.508 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy -0.508 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 5.08) (xy -0.508 5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 7.62) (xy -0.508 7.62)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 10.16) (xy -0.508 10.16)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0.508)
+					(mid -0.5058 0)
+					(end 0 -0.508)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 3.048)
+					(mid -0.5058 2.54)
+					(end 0 2.032)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 5.588)
+					(mid -0.5058 5.08)
+					(end 0 4.572)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 8.128)
+					(mid -0.5058 7.62)
+					(end 0 7.112)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 10.668)
+					(mid -0.5058 10.16)
+					(end 0 9.652)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 10.16 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -12.7 0)
+					(length 3.81)
+					(name "Pin_10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 7.62 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -7.62 0)
+					(length 3.81)
+					(name "Pin_8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -10.16 0)
+					(length 3.81)
+					(name "Pin_9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Connector_Generic:Conn_01x06"
 			(pin_names
 				(offset 1.016) hide)
@@ -4122,7 +4620,7 @@
 			(uuid "4884c05b-b88c-4585-afd7-548376f40c15")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D89")
 					(unit 1)
@@ -4210,7 +4708,7 @@
 			(uuid "a9acf0eb-2a3f-48c4-b4b7-2cd3ae26ade6")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D32")
 					(unit 1)
@@ -4278,7 +4776,7 @@
 			(uuid "186a22d9-b51e-4e83-bf91-e47d1add4d54")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S3J")
 					(unit 1)
@@ -4346,7 +4844,7 @@
 			(uuid "bd4cdb41-5782-415d-af47-d5cbc72cc685")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S3B")
 					(unit 1)
@@ -4434,7 +4932,7 @@
 			(uuid "f9fdc9e0-cce1-400a-80e5-85900ba06ba3")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D34")
 					(unit 1)
@@ -4501,7 +4999,7 @@
 			(uuid "d0ebc3f6-e4a9-4eb3-b7c8-64e253d47343")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "C1")
 					(unit 1)
@@ -4589,7 +5087,7 @@
 			(uuid "85f7d4dc-a657-45e7-abc2-f6519cd38d58")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D63")
 					(unit 1)
@@ -4657,7 +5155,7 @@
 			(uuid "9447a322-a883-48d8-b173-714b44dfe33f")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S4F")
 					(unit 1)
@@ -4725,7 +5223,7 @@
 			(uuid "bf3ecf3c-737a-4fc5-95ce-102947c09ffa")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S4J")
 					(unit 1)
@@ -4793,7 +5291,7 @@
 			(uuid "7657fc4c-e18d-4c76-9c19-7518e60d7954")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S2H")
 					(unit 1)
@@ -4861,7 +5359,7 @@
 			(uuid "3826b5b6-4951-4da9-aaee-d6658a35f13f")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S1H")
 					(unit 1)
@@ -4949,7 +5447,7 @@
 			(uuid "bafae061-d0fc-493f-b758-c8ba69780fdd")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D65")
 					(unit 1)
@@ -5036,7 +5534,7 @@
 			(uuid "bb4574fa-9d66-4411-80e3-faec05a69743")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D94")
 					(unit 1)
@@ -5102,7 +5600,7 @@
 			(uuid "1469173a-ddb2-4e82-9fde-f3ab10bbe0ee")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "#PWR03")
 					(unit 1)
@@ -5170,7 +5668,7 @@
 			(uuid "a3324440-0dbf-4fd9-b5eb-aaecf83139a3")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S1G")
 					(unit 1)
@@ -5238,7 +5736,7 @@
 			(uuid "01fd8fa4-7dc2-44da-83fa-cf3983273b66")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S2E")
 					(unit 1)
@@ -5326,7 +5824,7 @@
 			(uuid "efeda13b-f572-445f-a1b8-92d7aaebe3f9")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D58")
 					(unit 1)
@@ -5394,7 +5892,7 @@
 			(uuid "ebd28049-5724-4f02-bcda-6a5dd194318b")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S4L")
 					(unit 1)
@@ -5462,7 +5960,7 @@
 			(uuid "12a1fc7f-b6f1-4158-be1b-934f594d3d86")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S2A")
 					(unit 1)
@@ -5550,7 +6048,7 @@
 			(uuid "c29997b3-4a06-4580-ad45-2e64a96a76a5")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D57")
 					(unit 1)
@@ -5638,7 +6136,7 @@
 			(uuid "fb3306bb-ad99-4676-ad21-c6e016a93209")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D86")
 					(unit 1)
@@ -5718,7 +6216,7 @@
 			(uuid "a468f501-c300-41ed-b463-a52e817634ce")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "J1")
 					(unit 1)
@@ -5806,7 +6304,7 @@
 			(uuid "a9329954-bd5f-4fa2-b6fa-2e4cbe9aa523")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D68")
 					(unit 1)
@@ -5894,7 +6392,7 @@
 			(uuid "1a002e2d-6fff-4e94-bffa-cb91c1da628a")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D35")
 					(unit 1)
@@ -5982,7 +6480,7 @@
 			(uuid "afddc564-8bff-416e-a2ee-ecd3663d858e")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D87")
 					(unit 1)
@@ -6070,7 +6568,7 @@
 			(uuid "3cf6b05f-506d-4e9a-bba5-da72be16e427")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D62")
 					(unit 1)
@@ -6158,7 +6656,7 @@
 			(uuid "a1742752-36d7-4729-9273-b5d3ca58f2ac")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D5")
 					(unit 1)
@@ -6226,7 +6724,7 @@
 			(uuid "e0a53742-350b-4686-81f4-8e33b0e31ab1")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S4I")
 					(unit 1)
@@ -6314,7 +6812,7 @@
 			(uuid "36a29cc6-a205-412d-88d0-141e0938ee20")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D7")
 					(unit 1)
@@ -6402,7 +6900,7 @@
 			(uuid "9cac5e7f-e306-4ae6-8ef6-f41c38cc4fec")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D88")
 					(unit 1)
@@ -6490,7 +6988,7 @@
 			(uuid "2a4398c0-9648-4e9f-aec4-02f75259d60b")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D60")
 					(unit 1)
@@ -6578,7 +7076,7 @@
 			(uuid "a77dbed9-100b-4728-8b32-418a787748ba")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D29")
 					(unit 1)
@@ -6646,7 +7144,7 @@
 			(uuid "b485d741-409a-470b-84de-70d220fd3211")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S3G")
 					(unit 1)
@@ -6734,7 +7232,7 @@
 			(uuid "59aebd12-0485-40c1-ae6d-273c4b3b3578")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D39")
 					(unit 1)
@@ -6802,7 +7300,7 @@
 			(uuid "11f83906-123b-4b59-9a34-5a91f442b9c4")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S3H")
 					(unit 1)
@@ -6870,7 +7368,7 @@
 			(uuid "5092084c-cc95-4fdb-84b2-da64b5c94368")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S4D")
 					(unit 1)
@@ -6938,7 +7436,7 @@
 			(uuid "3f7a9706-2c44-426d-b8f2-47233ad3fe1d")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S2K")
 					(unit 1)
@@ -7026,7 +7524,7 @@
 			(uuid "498a26ca-7c2b-40da-b814-cc65cdd4197e")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D37")
 					(unit 1)
@@ -7094,7 +7592,7 @@
 			(uuid "185deb6f-e5be-43bd-ac46-ebfbd5d09498")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S3L")
 					(unit 1)
@@ -7162,7 +7660,7 @@
 			(uuid "d20c0dfc-75ff-4ee9-bf72-dc2e1b8f1f48")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S1K")
 					(unit 1)
@@ -7250,7 +7748,7 @@
 			(uuid "5beeb28e-73f5-4d12-8fe2-4ebb2ffa442c")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D67")
 					(unit 1)
@@ -7318,7 +7816,7 @@
 			(uuid "31de4840-92b1-4429-b8f5-e788f1a9991c")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S3K")
 					(unit 1)
@@ -7405,7 +7903,7 @@
 			(uuid "9b1f0739-7b96-4baf-aa42-273eab7b3c98")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D66")
 					(unit 1)
@@ -7493,7 +7991,7 @@
 			(uuid "85bb6909-0cbf-468c-86b8-5c5fb6c4a7c7")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D30")
 					(unit 1)
@@ -7561,7 +8059,7 @@
 			(uuid "147ec410-38f4-4547-aeed-ebf6585deed2")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S1A")
 					(unit 1)
@@ -7629,7 +8127,7 @@
 			(uuid "7d9dc94a-827c-4aeb-8477-3c56b91fa04c")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S4K")
 					(unit 1)
@@ -7696,7 +8194,7 @@
 			(uuid "b24389b8-e549-4c4a-9c88-4e23d10369a1")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "#PWR05")
 					(unit 1)
@@ -7836,7 +8334,7 @@
 			(uuid "4ba60baf-231f-4e4d-bc69-45077b6dd18e")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "U2")
 					(unit 1)
@@ -7924,7 +8422,7 @@
 			(uuid "3482b4f1-77dd-4967-a04f-41034bb576f9")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D1")
 					(unit 1)
@@ -7992,7 +8490,7 @@
 			(uuid "d44758e3-e7a8-4f0a-9388-a82a5ee57ae2")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S2L")
 					(unit 1)
@@ -8060,7 +8558,7 @@
 			(uuid "fba8b917-5a3f-499f-a052-7206dc233bff")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S1C")
 					(unit 1)
@@ -8128,7 +8626,7 @@
 			(uuid "d4c8af5c-ae48-4b78-bf6f-de1cb531ee16")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S1I")
 					(unit 1)
@@ -8196,7 +8694,7 @@
 			(uuid "76d230a5-9295-4955-925b-3e22f3fb8c96")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S2I")
 					(unit 1)
@@ -8283,7 +8781,7 @@
 			(uuid "19211fe7-ee89-47d6-9dac-ca8d9b548427")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D40")
 					(unit 1)
@@ -8371,7 +8869,7 @@
 			(uuid "8865b331-adde-459e-9ce0-f41abc91e40a")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D33")
 					(unit 1)
@@ -8439,7 +8937,7 @@
 			(uuid "1f2a9033-f76a-4906-ab47-eff6e487cbde")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S4C")
 					(unit 1)
@@ -8527,7 +9025,7 @@
 			(uuid "526ac761-a204-4720-b032-ead12b81fa09")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D11")
 					(unit 1)
@@ -8615,7 +9113,7 @@
 			(uuid "ac121766-e058-4f12-9364-a08ef80391e9")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D85")
 					(unit 1)
@@ -8703,7 +9201,7 @@
 			(uuid "7140e136-d920-4a32-9871-54f6d655ba35")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D92")
 					(unit 1)
@@ -8771,7 +9269,7 @@
 			(uuid "224589db-bce8-4b75-b847-12c4e258a57e")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S4A")
 					(unit 1)
@@ -8839,7 +9337,7 @@
 			(uuid "f170e14f-79d5-4595-8b0f-437d7d4e4e12")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S1L")
 					(unit 1)
@@ -8907,7 +9405,7 @@
 			(uuid "f2856f33-0191-4c31-8b37-ebc06a8c62eb")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S4E")
 					(unit 1)
@@ -8975,7 +9473,7 @@
 			(uuid "72552991-e94d-4d51-87bb-124b6f37bc24")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S2F")
 					(unit 1)
@@ -9043,7 +9541,7 @@
 			(uuid "85dec98c-fe2c-4847-98c3-57a3137eeaf3")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S1J")
 					(unit 1)
@@ -9111,7 +9609,7 @@
 			(uuid "153cd082-13c7-409e-9ecc-bb11aca5f96f")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S1F")
 					(unit 1)
@@ -9179,7 +9677,7 @@
 			(uuid "73fe3cf4-7221-433b-8d1c-e67a61954cae")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S3A")
 					(unit 1)
@@ -9267,7 +9765,7 @@
 			(uuid "567c7664-bb7c-4471-847d-59a90454cc42")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D3")
 					(unit 1)
@@ -9335,7 +9833,7 @@
 			(uuid "c5ffca90-fe44-46cb-a0c6-5c8374c0e259")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S1E")
 					(unit 1)
@@ -9423,7 +9921,7 @@
 			(uuid "6659cbb9-6aca-474c-8092-39d2a92267e4")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D95")
 					(unit 1)
@@ -9491,7 +9989,7 @@
 			(uuid "7062d418-5d24-4f37-9c19-01f8a4ec3a01")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S2G")
 					(unit 1)
@@ -9579,7 +10077,7 @@
 			(uuid "d01aecf6-fb64-45a3-8bab-2257f15ef1d8")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D93")
 					(unit 1)
@@ -9666,7 +10164,7 @@
 			(uuid "64b54926-6d25-4f7c-8e69-e45432879478")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D38")
 					(unit 1)
@@ -9734,7 +10232,7 @@
 			(uuid "0e2682d9-7428-41f1-94f9-6f6c2a27eebe")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S3C")
 					(unit 1)
@@ -9822,9 +10320,101 @@
 			(uuid "67e57533-f213-4b24-9e56-ed9ed191b949")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D64")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x10_Socket")
+		(at 240.03 21.59 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b7b3810d-be98-4be6-8377-e7c55aa319ee")
+		(property "Reference" "J2"
+			(at 241.3 16.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x10_Socket"
+			(at 241.3 19.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_FFC-FPC:Molex_200528-0100_1x10-1MP_P1.00mm_Horizontal"
+			(at 240.03 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 240.03 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x10, script generated"
+			(at 240.03 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "ee803cce-5465-46b5-b32a-454929749866")
+		)
+		(pin "2"
+			(uuid "94e7c1d9-d719-4b15-9029-fcf46dde3e8c")
+		)
+		(pin "6"
+			(uuid "75a32687-d608-4490-85b9-213ea117c076")
+		)
+		(pin "10"
+			(uuid "da9e8e73-1de2-40b7-9938-160dd7f127b1")
+		)
+		(pin "7"
+			(uuid "15372dfd-0886-4cae-a372-1e4565a2862e")
+		)
+		(pin "9"
+			(uuid "d53a6ade-9a31-4a55-9f88-880adc3423df")
+		)
+		(pin "1"
+			(uuid "cf6d4b01-e678-4d33-84dc-fdf35789f648")
+		)
+		(pin "4"
+			(uuid "0afec79b-1b94-46d7-80e1-41ef1517abaa")
+		)
+		(pin "8"
+			(uuid "e72b1fd2-a6a5-4062-b075-692d84fa86b9")
+		)
+		(pin "5"
+			(uuid "2986e163-7706-4f9a-9cb7-a6c743105583")
+		)
+		(instances
+			(project "KBV3_matrix"
+				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -9888,7 +10478,7 @@
 			(uuid "bb34e394-b0c9-41f7-bc84-e5cb523460c5")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "#PWR06")
 					(unit 1)
@@ -9956,7 +10546,7 @@
 			(uuid "edfb9975-17d6-4456-8f6f-ce19c2216576")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S2C")
 					(unit 1)
@@ -10044,7 +10634,7 @@
 			(uuid "96f97b2e-62f5-4cb6-8b15-30c93bbda6ad")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D90")
 					(unit 1)
@@ -10112,7 +10702,7 @@
 			(uuid "5e05cae5-322d-44e2-adea-89e37e8f9cfc")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S4G")
 					(unit 1)
@@ -10200,7 +10790,7 @@
 			(uuid "8cd6ed3a-8386-484c-ad56-e52438357e7c")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D91")
 					(unit 1)
@@ -10268,7 +10858,7 @@
 			(uuid "4fd8a24b-4de0-4d00-955b-0264f458051b")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S4B")
 					(unit 1)
@@ -10356,7 +10946,7 @@
 			(uuid "6680c3bd-6caf-426a-841e-12c07005da5f")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D2")
 					(unit 1)
@@ -10444,7 +11034,7 @@
 			(uuid "9d5d4efe-0273-4121-a41f-e23bcd0c3c61")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D8")
 					(unit 1)
@@ -10512,7 +11102,7 @@
 			(uuid "1dd241ab-3a25-49cd-ac05-3f5630591bdc")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S1B")
 					(unit 1)
@@ -10580,7 +11170,7 @@
 			(uuid "270225ea-8fdd-4ef6-a403-ac1499c5d38c")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S3D")
 					(unit 1)
@@ -10646,7 +11236,7 @@
 			(uuid "b5bec87e-f492-435a-8eec-3be0578cabaa")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "#PWR02")
 					(unit 1)
@@ -10734,7 +11324,7 @@
 			(uuid "99c5fe7d-5029-4f8a-9e63-044cd2509d0c")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D31")
 					(unit 1)
@@ -10822,7 +11412,7 @@
 			(uuid "909578a9-411b-43bf-8bf4-6efc47e45c05")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D59")
 					(unit 1)
@@ -10890,7 +11480,7 @@
 			(uuid "9c629976-f11a-481c-a11e-ba870a6678b6")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S1D")
 					(unit 1)
@@ -10977,7 +11567,7 @@
 			(uuid "f6b838f0-cafe-43b7-98af-c93b47540c66")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D10")
 					(unit 1)
@@ -11045,7 +11635,7 @@
 			(uuid "acf6a693-3fd4-4966-a584-00c9cc01c874")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S2B")
 					(unit 1)
@@ -11133,7 +11723,7 @@
 			(uuid "67fa5784-543a-447c-8d13-681559347224")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D6")
 					(unit 1)
@@ -11221,7 +11811,7 @@
 			(uuid "7573aed9-085e-4937-affd-5d102b64f6dc")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D36")
 					(unit 1)
@@ -11309,7 +11899,7 @@
 			(uuid "39521bf7-8740-4120-8ec9-56fea9c13094")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D61")
 					(unit 1)
@@ -11397,7 +11987,7 @@
 			(uuid "bdf9567c-5424-4d60-939c-23ce42ea854b")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D96")
 					(unit 1)
@@ -11465,7 +12055,7 @@
 			(uuid "1d529872-3e5b-41e0-b895-8d293cb24aac")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S2D")
 					(unit 1)
@@ -11533,7 +12123,7 @@
 			(uuid "8c199ce0-766a-433e-8a1e-dbde88e0bcc0")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S4H")
 					(unit 1)
@@ -11621,7 +12211,7 @@
 			(uuid "a5d5665e-9178-4e79-8388-70be22448619")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D9")
 					(unit 1)
@@ -11689,7 +12279,7 @@
 			(uuid "fe0e8695-2cf3-4f60-9e9b-8398c2724186")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S3F")
 					(unit 1)
@@ -11755,7 +12345,7 @@
 			(uuid "444a1e46-6fea-450d-b71d-32154923a172")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "#PWR01")
 					(unit 1)
@@ -11823,7 +12413,7 @@
 			(uuid "95fff036-5c08-49f5-9708-1b861cc5943c")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S3I")
 					(unit 1)
@@ -11890,7 +12480,7 @@
 			(uuid "8cb74845-7a94-4a85-b13d-8b18533d0be7")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "C2")
 					(unit 1)
@@ -11956,7 +12546,7 @@
 			(uuid "856c659f-b76b-45d1-a35a-dfd9315a6878")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "#PWR04")
 					(unit 1)
@@ -12044,7 +12634,7 @@
 			(uuid "8ce6cf18-82f1-4d65-bc77-588067361ec5")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D12")
 					(unit 1)
@@ -12112,7 +12702,7 @@
 			(uuid "044360b1-86bc-4cba-ba63-a4383b85d90c")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S2J")
 					(unit 1)
@@ -12200,7 +12790,7 @@
 			(uuid "33527e4e-2084-41c1-bebd-5eb01f1785a8")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "D4")
 					(unit 1)
@@ -12268,7 +12858,7 @@
 			(uuid "72a3e3d3-eba0-4eaa-936b-b6dd543ca19c")
 		)
 		(instances
-			(project "KBV3"
+			(project "KBV3_matrix"
 				(path "/cc2e2ead-865e-4be9-9c0e-cfcbfb9e5193"
 					(reference "S3E")
 					(unit 1)
