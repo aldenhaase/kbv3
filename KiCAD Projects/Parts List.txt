@@ -38,3 +38,24 @@ USB-C Port
 PMIC 
 	- MAX77958EWV+T (https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX77958EWV-T/12460782)
 		- $2.89 /unit
+
+USD ESD Protection
+	- USBLC6-2SC6 (https://www.digikey.com/en/products/detail/stmicroelectronics/USBLC6-2SC6/1040559)
+		- $0.58 /unit
+
+Battery Charger with buck boost converter
+	- MAX77960EFV06+ (https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX77960EFV06/13403822)
+		- $6.50 / unit
+Low Dropout Regulator (LDO)
+	3.3V Low Dropout Regulator (LDO)
+		- MCP1825S (https://www.digikey.com/en/products/detail/microchip-technology/MCP1825S-3302E-DB/1636103)
+			- $0.69 / unit
+	
+	5V Low Dropout Regulator (LDO)
+		- MCP1825S (https://www.digikey.com/en/products/detail/microchip-technology/MCP1825S-5002E-DB/1636099)
+			- $0.69 / unit
+	OR
+	Adjustable Low Dropout Regulator (LDO)
+		- MCP1825T-ADJE/DC (https://www.digikey.com/en/products/detail/microchip-technology/MCP1825T-ADJE-DC/1635498)
+			- $0.69 / unit
+	
