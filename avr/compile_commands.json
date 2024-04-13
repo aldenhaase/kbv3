@@ -1,0 +1,17 @@
+[
+  {
+    "arguments": [
+      "/opt/avr8-gnu-toolchain-linux_x86_64/bin/avr-gcc",
+      "-c",
+      "-Wall",
+      "-Os",
+      "-mmcu=attiny85",
+      "-o",
+      "build/led_driver.out",
+      "src/main.c"
+    ],
+    "directory": "/home/alden/kbv3/avr",
+    "file": "/home/alden/kbv3/avr/src/main.c",
+    "output": "/home/alden/kbv3/avr/build/led_driver.out"
+  }
+]
