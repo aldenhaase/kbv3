@@ -1,0 +1,10 @@
+description: Texas Instruments TCA8418 keypad encoder
+
+compatible: "ti,tca8418"
+
+include: i2c-device.yaml
+
+properties:
+  gpios:
+    type: phandle-array
+    required: true
