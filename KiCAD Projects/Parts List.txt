@@ -30,6 +30,10 @@ FFC Connector (Keypad Matrix to MCU)
 MCU
 	- ATSAMD21J18A-AUT (https://www.digikey.com/en/products/detail/microchip-technology/ATSAMD21J18A-AUT/4878863)
 		- $4.46 /unit
+		
+LED Controller MCU
+	- ATTINY85-20SUR (https://www.digikey.com/en/products/detail/microchip-technology/ATTINY85-20SUR/2357441)
+		- $1.57 /unit
 
 USB-C Port
 	- USB4056-03-A (https://www.digikey.com/en/products/detail/gct/USB4056-03-A/14638038)
